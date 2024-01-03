@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% load static %}
+  
+    <div class="auth">
+      <div class="card">
+        <div class="auth__header text-center">
+          
+          <h3>Delete Skill</h3>
+          <p>Hello Developer, Hope you are doing well!</p>
+        </div>
+
+        <div class="form__field">
+            <label for="formInput#text">Are you sure want to delete this skill ? <h3>{{skill.name}}</h3>  </label>
+             
+          </div>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="auth__actions">
+                <input class="btn btn--sub btn--lg" type="submit" value="Delete" />
+                <a href="{% url 'myaccount1' %}">Go Back</a>
+            </div>
+
+        </form>
+
+          
+
+    </div>
+    </div>
+    
+{% endblock content %}
